@@ -7,7 +7,7 @@ module user_proj_example (
 	io_in,
 	io_out,
 	io_oeb,
-	user_irq,
+	irq,
 	user_clock2,
 	analog_io,
 	wb_clk_i,
@@ -44,7 +44,7 @@ module user_proj_example (
 	input wire [37:0] io_in;
 	output wire [37:0] io_out;
 	output wire [37:0] io_oeb;
-	output wire [2:0] user_irq;
+	output wire [2:0] irq;
 	input user_clock2;
 	inout [28:0] analog_io;
 	input wire wb_clk_i;
@@ -59,7 +59,7 @@ module user_proj_example (
 	output wire [31:0] wbs_dat_o;
 	wire clk;
 	wire rst_n;
-	assign user_irq = 3'b000;
+	assign irq = 3'b000;
 	assign la_data_out = 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
 	assign io_out = 0;
 	assign io_oeb = 0;
